@@ -75,6 +75,8 @@
 
 
     document.querySelector('#chat-message-submit').onClick = function(e) {
+        e.preventDefault();
+
         const messageInputDom = document.querySelect('#chat-message-submit');
         const message = messageInputDom.value;
 
@@ -85,6 +87,8 @@
         }));
 
         messageInputDom.value = '';
+
+        return false;
     } 
 
 </script>
